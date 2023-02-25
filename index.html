@@ -1,0 +1,43 @@
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/css/style.css">
+  <link rel="shortcut icon" href="./src/imagens/favicon.ico" type="image/x-icon">
+
+  <script src="https://kit.fontawesome.com/67aa33abf6.js" crossorigin="anonymous"></script>
+  <script src="./src/js/index.js" defer></script>
+  
+  <title>AluraFlix - Séries Favoritas</title>
+</head>
+<body>
+  <header>
+    <img src="https://fontmeme.com/permalink/220915/dc37cc1a0e9f2f85df03cff0fd296c87.png">
+  </header>
+
+  <main>
+    <section class="content">
+      <div class="container">
+        <div class="add-movie-field">
+          <input type="text" name="movie-name" id="movie-name" placeholder="Nome do Filme/Série">
+          <input type="text" name="movie-url" id="movie-url" placeholder="URL da capa">
+          <div class="error-and-button">
+            <p class="error"></p>
+            <button id="addBtn">Adicionar</button>
+          </div>
+        </div>
+
+        <div class="movies-cards">
+          <div class="cards-list">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,206 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+:root {
+  font-size: 62.5%;
+
+  --primary-color: #db0000;
+
+  --primary-hover-color: #a10303;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Lato', sans-serif;
+
+  min-height: 100vh;
+
+  padding: 4rem 2rem 8rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: url('https://assets.b9.com.br/wp-content/uploads/2016/10/netflix-catalogo.jpg');
+  background-size: contain;
+}
+
+header > img {
+  margin-top: -11px;
+  width: 110%;
+  height: 100%;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.primary-color {
+  color: var(--primary-color);
+}
+
+.error {
+  color: red;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 5rem;
+}
+
+.add-movie-field {
+  display: flex;
+  flex-direction: column;
+
+  width: 40rem;
+
+  padding: 3rem 3rem 3rem;
+
+  background: rgba(0, 0, 0, 0.8);
+
+  box-shadow: 3px 3px 20px black;
+}
+
+.add-movie-field input + input {
+  margin-top: 2.5rem;
+}
+
+.add-movie-field input {
+  background: transparent;
+
+  border: none;
+  font-size: 1.8rem;
+  border-bottom: 1px solid gray;
+
+  outline: none;
+
+  color: white;
+
+  padding: 0.2rem;
+
+  transition: 0.4s;
+}
+
+.add-movie-field input:focus {
+  border-bottom: 1px solid white;
+}
+
+.error-and-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  text-align: center;
+
+  font-size: 1.4rem;
+
+  margin-top: 1.5rem;
+}
+
+.add-movie-field button {
+  height: 4.4rem;
+  width: 11rem;
+
+  cursor: pointer;
+
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  color: white;
+  font-size: 1.6rem;
+
+  background-color: var(--primary-color);
+
+  border: none;
+  border-radius: 10px;
+
+  transition: 0.3s;
+}
+
+.add-movie-field button:hover {
+  background: var(--primary-hover-color);
+}
+
+.cards-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 2rem;
+  row-gap: 4rem;
+}
+
+.card {
+  position: relative;
+  z-index: 11;
+
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+
+  transition: transform 0.4s;
+}
+
+.card img {
+  width: 19rem;
+  height: 26rem;
+
+  position: relative;
+
+  border: 3px solid transparent;
+
+  transition: filter 0.5s;
+}
+
+.card:hover {
+  transform: scale(1.2);
+}
+
+.card:hover img {
+  border: 3px solid white;
+}
+
+.card span {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-weight: bolder;
+  margin-top: 10px;
+  font-size: 2.2rem;
+  text-align: center;
+
+  transition: filter 0.5s;
+}
+
+.blur img,
+.blur span {
+  filter: blur(0.15rem);
+}
+
+.card button {
+  position: absolute;
+  right: 8px; top: 8px;
+
+  height: 2rem;
+  width: 2rem;
+
+  color: white;
+
+  visibility: hidden;
+
+  border-radius: 3px;
+
+  background: var(--primary-color);
+}
+
+.card button:hover {
+  filter: brightness(0.9);
+}
+
+.card.show-remove button {
+  visibility: visible;
+}
